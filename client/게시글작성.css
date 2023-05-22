@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  * {
+    font-family: 'NanumSquareNeo-Variable';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    color: black;
+  }
+
+  /* 바디 전체 */
+  body {
+    background: url(./images/UDiroBackgroundIMG.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  /* 컨테이너 */
+  #container {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* 헤더 전체 */
+  header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: gray;
+    opacity: 0.85;
+    line-height: 70px;
+  }
+
+  /* 헤더의 로고 이미지 */
+  #main__logo {
+    margin: 0 auto;
+  }
+
+  header > div > img {
+    width: 115px;
+  }
+
+  /* 헤더 메뉴부분 전체 */
+  #header__menu {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    font-weight: 700;
+  }
+
+  .header__menu__list {
+    color: white;
+  }
+
+  /* 헤더의 메뉴 리스트 */
+  header > ul > li {
+    margin-right: 10%;
+  }
+
+  /* 로그인 회원가입 */
+  .login__signUp {
+    width: 7%;
+    display: flex;
+    justify-content: right;
+    font-size: 12px;
+  }
+
+  #signUp {
+    margin-right: 30px;
+  }
+
+  #logout {
+    margin-right: 15px;
+  }
+
+  /* 헤더 끝 */
+
+  /* 게시판 글쓰기 */
+
+  #notice__container {
+    border-radius: 5px;
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  .notice__title {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .notice__title button {
+    border-radius: 5px;
+    margin: 0;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .notice__title h2 {
+    flex-grow: 1;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  main {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  .form__container {
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #search__filter {
+    border-radius: 5px;
+    flex: left;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 25px;
+  }
+
+  #form__title1 {
+    border-radius: 5px;
+    padding: 3px;
+    resize: none;
+    flex: right;
+    width: 990px;
+    height: 25px;
+    margin-bottom: 10px;
+    line-height: 25px;
+  }
+
+  #form__text {
+    border-radius: 5px;
+    padding: 3px;
+    resize: none;
+    width: 1100px;
+    height: 500px;
+  }
+
+  #edit__box {
+    border-radius: 5px;
+    width: 1100px;
+    height: 40px;
+    background-color: gray;
+    list-style: none;
+    display: flex;
+    justify-items: flex-start;
+  }
+
+  .edit__box__icon {
+    margin-right: 100px;
+    margin-left: 30px;
+    color: black;
+    background-color: gray;
+    list-style: none;
+    line-height: 40px;
+    border: none;
+  }
+  /* 게시판 글쓰기 끝 */
+
+  /* 모달 스타일 */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-content > h2 {
+    margin-bottom: 10px;
+  }
+
+  .modal p {
+    margin-bottom: 20px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-buttons button {
+    width: 80px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  /* 나머지 스타일 */
+  /* ... */

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+		<!-- Site favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="vendors/images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="vendors/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="vendors/images/favicon-16x16.png"
+		/>
+
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendors/styles/icon-font.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/datatables/css/dataTables.bootstrap4.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/datatables/css/responsive.bootstrap4.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
+		></script>
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-GBZ3SGGX85");
+		</script>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+		</script>
+		<!-- End Google Tag Manager -->
+		<style>
+			.left-side-bar .menu-block {
+				padding-top: 0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="header" style="justify-content: flex-end;">
+			<!-- header Left start
+			-->
+			<!-- <div class="header-left">
+				<div
+					class="search-toggle-icon bi bi-search"
+					data-toggle="header_search"
+				></div>
+				<div class="header-search">
+					<form>
+						<div class="form-group mb-0">
+							<i class="dw dw-search2 search-icon"></i>
+							<input
+								type="text"
+								class="form-control search-input"
+								placeholder="Search Here"
+							/>
+							<div class="dropdown">
+								<a
+									class="dropdown-toggle no-arrow"
+									href="#"
+									role="button"
+									data-toggle="dropdown"
+								>
+									<i class="ion-arrow-down-c"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<div class="form-group row">
+										<label class="col-sm-12 col-md-2 col-form-label"
+											>From</label
+										>
+										<div class="col-sm-12 col-md-10">
+											<input
+												class="form-control form-control-sm form-control-line"
+												type="text"
+											/>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-12 col-md-2 col-form-label">To</label>
+										<div class="col-sm-12 col-md-10">
+											<input
+												class="form-control form-control-sm form-control-line"
+												type="text"
+											/>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-12 col-md-2 col-form-label"
+											>Subject</label
+										>
+										<div class="col-sm-12 col-md-10">
+											<input
+												class="form-control form-control-sm form-control-line"
+												type="text"
+											/>
+										</div>
+									</div>
+									<div class="text-right">
+										<button class="btn btn-primary">Search</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div> -->
+			<!-- header Left end-->
+			<div class="header-right">
+				<!-- 알림 시작 -->
+				<!-- <div class="user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="#"
+							role="button"
+							data-toggle="dropdown"
+						>
+							<i class="icon-copy dw dw-notification"></i>
+							<span class="badge notification-active"></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="notification-list mx-h-350 customscroll">
+								<ul>
+									<li>
+										<a href="#">
+											<img src="vendors/images/img.jpg" alt="" />
+											<h3>John Doe</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit, sed...
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="vendors/images/photo1.jpg" alt="" />
+											<h3>Lea R. Frith</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit, sed...
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="vendors/images/photo2.jpg" alt="" />
+											<h3>Erik L. Richards</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit, sed...
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="vendors/images/photo3.jpg" alt="" />
+											<h3>John Doe</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit, sed...
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="vendors/images/photo4.jpg" alt="" />
+											<h3>Renee I. Hansen</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit, sed...
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="vendors/images/img.jpg" alt="" />
+											<h3>Vicki M. Coleman</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit, sed...
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- 알림 끝 -->
+				<div class="user-info-dropdown">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle"
+							href="#"
+							role="button"
+							data-toggle="dropdown"
+						>
+							<span class="user-icon">
+								<img src="./img/udiro_logo_2.png" alt="" />
+							</span>
+							<span class="user-name">admin</span>
+						</a>
+						<div
+							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+						>
+							<!-- <a class="dropdown-item" href="profile.html"
+								><i class="dw dw-user1"></i> Profile</a
+							>
+							<a class="dropdown-item" href="profile.html"
+								><i class="dw dw-settings2"></i> Setting</a
+							>
+							<a class="dropdown-item" href="faq.html"
+								><i class="dw dw-help"></i> Help</a
+							> -->
+							<a class="dropdown-item" href="login.html"
+								><i class="dw dw-logout"></i> Log Out</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-sidebar">
+			<div class="sidebar-title">
+				<h3 class="weight-600 font-16 text-blue">
+					Layout Settings
+					<span class="btn-block font-weight-400 font-12"
+						>User Interface Settings</span
+					>
+				</h3>
+				<div class="close-sidebar" data-toggle="right-sidebar-close">
+					<i class="icon-copy ion-close-round"></i>
+				</div>
+			</div>
+			<div class="right-sidebar-body customscroll">
+				<div class="right-sidebar-body-content">
+					<h4 class="weight-600 font-18 pb-10">Header Background</h4>
+					<div class="sidebar-btn-group pb-30 mb-10">
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary header-white active"
+							>White</a
+						>
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary header-dark"
+							>Dark</a
+						>
+					</div>
+
+					<h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
+					<div class="sidebar-btn-group pb-30 mb-10">
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary sidebar-light"
+							>White</a
+						>
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary sidebar-dark active"
+							>Dark</a
+						>
+					</div>
+
+					<h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
+					<div class="sidebar-radio-group pb-10 mb-10">
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebaricon-1"
+								name="menu-dropdown-icon"
+								class="custom-control-input"
+								value="icon-style-1"
+								checked=""
+							/>
+							<label class="custom-control-label" for="sidebaricon-1"
+								><i class="fa fa-angle-down"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebaricon-2"
+								name="menu-dropdown-icon"
+								class="custom-control-input"
+								value="icon-style-2"
+							/>
+							<label class="custom-control-label" for="sidebaricon-2"
+								><i class="ion-plus-round"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebaricon-3"
+								name="menu-dropdown-icon"
+								class="custom-control-input"
+								value="icon-style-3"
+							/>
+							<label class="custom-control-label" for="sidebaricon-3"
+								><i class="fa fa-angle-double-right"></i
+							></label>
+						</div>
+					</div>
+
+					<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
+					<div class="sidebar-radio-group pb-30 mb-10">
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-1"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-1"
+								checked=""
+							/>
+							<label class="custom-control-label" for="sidebariconlist-1"
+								><i class="ion-minus-round"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-2"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-2"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-2"
+								><i class="fa fa-circle-o" aria-hidden="true"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-3"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-3"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-3"
+								><i class="dw dw-check"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-4"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-4"
+								checked=""
+							/>
+							<label class="custom-control-label" for="sidebariconlist-4"
+								><i class="icon-copy dw dw-next-2"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-5"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-5"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-5"
+								><i class="dw dw-fast-forward-1"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-6"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-6"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-6"
+								><i class="dw dw-next"></i
+							></label>
+						</div>
+					</div>
+
+					<div class="reset-options pt-30 text-center">
+						<button class="btn btn-danger" id="reset-settings">
+							Reset Settings
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="left-side-bar">
+			<div class="brand-logo">
+				<a href="index.html">
+					<img src="./img/udiro_logo_2.png" alt="udirologo" class="dark-logo" />
+					<img
+						src="vendors/images/deskapp-logo-white.svg"
+						alt=""
+						class="light-logo"
+					/>
+				</a>
+				<div class="close-sidebar" data-toggle="left-sidebar-close">
+					<i class="ion-close-round"></i>
+				</div>
+			</div>
+			<div class="menu-block customscroll">
+				<!-- 사이드바 메뉴 -->
+				<div class="sidebar-menu">
+					<div style="background-color: black; text-align: center; height: 60px; box-sizing: border-box; padding: 10px 0;">
+						<div>
+							<span style="color: white; font-size: 30px;">관리자 메뉴</span>
+						</div>
+					</div>
+					<ul id="accordion-menu">
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-house"></span
+								><span class="mtext">회원 관리</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="index.html">사용자 정보</a></li>
+								<li><a href="banned.html">제한된 사용자</a></li>
+								<li><a href="reportList.html">신고 내역</a></li>
+								<li><a href="questionList.html">문의 내역</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-textarea-resize"></span>
+								<span class="mtext">문화 관리</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="culture-upload.html">게시글 업로드</a></li>
+								<li><a href="culture-festa.html">축제/공연</a></li>
+								<li><a href="culture-place.html">장소/추천</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-table"></span
+								><span class="mtext">게시판 관리</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="게시글 업로드.html">게시글 업로드</a></li>
+								<li><a href="게시글관리.html">게시글 관리</a></li>
+								<li><a href="댓글관리.html">댓글 관리</a></li>
+								<li><a href="게시판관리.html">게시판 관리</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-archive"></span
+								><span class="mtext">공지사항 관리</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="notice-board-upload.html">공지사항 업로드</a></li>
+								<li><a href="notice-board-management.html">공지사항 관리</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- 사이드 바 메뉴 끝 -->
+			</div>
+		</div>
+		<div class="mobile-menu-overlay"></div>
+
+		<div class="main-container">
+			<div class="xs-pd-20-10 pd-ltr-20">
+				<!-- 회원정보 -->
+				<div class="card-box pb-10">
+					<div class="h5 pd-20 mb-0">문화 글쓰기</div>
+					<!-- 이미지 -->
+					<div class="form-group mb-0" style="width: 80%; margin: 0 auto; display: flex;">
+								<colgroup>
+									<col style="width:22%"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+									<td>
+										<div class="tdcell" style="width:35%; float:left; margin-right:70px">
+											<div class="profile_photo">
+												<img id="imgThumb" src="festa.PNG">
+												<span class="mask"></span>
+											</div>
+											<div class="btn_area_btm">
+												<span class="btn_file">
+													<input type="file" id="inputImage" name="profileImage" accept="image/*">
+												</span>
+												<div id="coach_tooltip" class="coach_tooltip" style="display: none;">
+													<span class="tooltip_img" aria-hidden="true"></span>
+											</span></a>
+													<button type="button" class="btn_tooltip_close_area" aria-label="닫기" onclick="closeToolTip();clickcr(this,'prf.avtindx','','',event);"><span class="btn_tooltip_close"></span></button>
+												</div>
+											</div>
+										</div>
+									</td>
+
+						
+								</tr>
+									</ul>
+								</tbody>
+							</table>
+
+<style>
+.type-box .type-th {
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 40px;
+    padding: 7px 0px 0px 0px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    position: relative;
+    margin:0;
+    text-align: center;
+    float:left;
+}
+</style>
+						<div class="txt-box" style="float:right; width: 65%;">	
+							<div class="event-title" style="margin-bottom: 30px">
+								<h2>이름을 입력</h2>
+							</div>
+							<div class="type-box" style="margin: 50px 0px;">
+								<ul>
+									<li>
+										<div class="type-th">
+											<span>장르선택</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+												<select name="searchregion" class="tagsize" id="local" style="margin-left:10px;">
+													<option value="" class="needblack"> 선택</option>
+														<option value="" class="needblack">축제/공연</option>
+														<option value="" class="needblack">장소 추천</option>
+												</select>
+										</div>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>장소</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+											<span style="padding-left:15px">내용을 입력</span>
+										</div>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>기간</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+											<span style="padding-left:15px">
+												내용을 입력
+											</span>
+										</div>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>시간</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+											<span style="padding-left:15px">
+												내용을 입력
+											</span>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>대상</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+											<span style="padding-left:15px">
+												내용을 입력
+											</span>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>요금</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+											<span style="padding-left:15px">
+												내용을 입력
+											</span>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>문의</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+											<span style="padding-left:15px">
+												내용을 입력
+											</span>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>장르</span>
+										</div>
+										<div class="type-td" style="padding-top:10px;">
+											<span style="padding-left:15px">
+												내용을 입력
+											</span>
+									</li>
+									<br>
+									<li>
+										<div class="type-th">
+											<span>홈페이지</span>
+										</div>
+										<div class="type-td">
+											<div class="detail-btn" style="padding-top:10px;">
+												<span style="padding-left:15px">홈페이지 주소를 입력</span>
+											</div>
+										</div>
+									</li>
+									<br>
+							</ul>
+						</div>
+					</div>
+
+							<!-- <tr>
+								<td class="table-plus">
+									<div class="name-avatar d-flex align-items-center">
+										<div class="avatar mr-2 flex-shrink-0">
+											<img
+												src="vendors/images/photo1.jpg"
+												class="border-radius-100 shadow"
+												width="40"
+												height="40"
+												alt=""
+											/>
+										</div>
+										<div class="txt">
+											<div class="weight-600">Doris L. Larson</div>
+										</div>
+									</div>
+								</td>
+								<td>Male</td>
+								<td>76 kg</td>
+								<td>Dr. Ren Delan</td>
+								<td>22 Jul 2020</td>
+								<td>
+									<span
+										class="badge badge-pill"
+										data-bgcolor="#e7ebf5"
+										data-color="#265ed7"
+										>Dengue</span
+									>
+								</td>
+								<td>
+									<div class="table-actions">
+										<a href="#" data-color="#265ed7"
+											><i class="icon-copy dw dw-edit2"></i
+										></a>
+										<a href="#" data-color="#e95959"
+											><i class="icon-copy dw dw-delete-3"></i
+										></a>
+									</div>
+								</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+				<div style="font-size:30px; font-weight: 700; text-align: center;
+				margin:50px 0px"> 상세 내용 작성 </div>
+				<script type="text/javascript" src="./libs/smarteditor2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+				<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+				<textarea id="txtContent" rows="10" cols="100" style="width: 100%;"></textarea>
+				<!-- textarea 밑에 script 작성하기 -->
+				<script id="smartEditor" type="text/javascript"> 
+					var oEditors = [];
+					nhn.husky.EZCreator.createInIFrame({
+						oAppRef: oEditors,
+						elPlaceHolder: "txtContent",  //textarea ID 입력
+						sSkinURI: "/libs/smarteditor2/SmartEditor2Skin.html",  //martEditor2Skin.html 경로 입력
+						fCreator: "상세 보기",
+						htParams : { 
+							// 툴바 사용 여부 (true:사용/ false:사용하지 않음) 
+							bUseToolbar : true, 
+						// 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음) 
+						bUseVerticalResizer : false, 
+						// 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음) 
+						bUseModeChanger : false 
+						}
+					});
+				</script>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary">저장</button>
+				<button
+				type="button"
+				class="btn btn-secondary"
+				data-dismiss="modal">취소</div>
+			
+		</div>
+				<!-- 회원정보끝 -->
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					DeskApp - Bootstrap 4 Admin Template By
+					<a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+				</div>
+			</div>
+		</div>
+		<!-- js -->
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="src/plugins/apexcharts/apexcharts.min.js"></script>
+		<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="vendors/scripts/dashboard3.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	</body>
+</html>
