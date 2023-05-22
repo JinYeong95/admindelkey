@@ -1,0 +1,87 @@
+<style>
+    td {
+      padding: 5px;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Information</h1>
+
+  <table>
+    <tr>
+      <td>이름</td>
+      <td id="name">탁성대</td>
+      <td><button onclick="editField('name')">수정</button></td>
+    </tr>
+    <tr>
+      <td>아이디</td>
+      <td id="id">abcd1234</td>
+      <td><button onclick="editField('id')">수정</button></td>
+    </tr>
+    <tr>
+      <td>비밀번호</td>
+      <td id="password">********</td>
+      <td><button onclick="editField('password')">수정</button></td>
+    </tr>
+    <tr>
+      <td>닉네임</td>
+      <td id="nickname">탁창대</td>
+      <td><button onclick="editField('nickname')">수정</button></td>
+    </tr>
+    <tr>
+      <td>이메일</td>
+      <td id="email">abcd1234@naver.com</td>
+      <td><button onclick="editField('email')">수정</button></td>
+    </tr>
+    <tr>
+      <td>휴대폰번호</td>
+      <td id="phone">0101111111</td>
+      <td><button onclick="editField('phone')">수정</button></td>
+    </tr>
+    <tr>
+      <td>자주가는 지역</td>
+      <td id="location">강남구</td>
+      <td><button onclick="editField('location')">수정</button></td>
+    </tr>
+    <tr>
+      <td>프로필 사진</td>
+      <td id="profile">../profile/eadgnus</td>
+      <td><button onclick="editField('profile')">수정</button></td>
+    </tr>
+  </table>
+
+  <script>
+    function editField(fieldId) {
+      var field = document.getElementById(fieldId);
+      var currentValue = field.innerText;
+      var input = document.createElement("input");
+      input.type = "text";
+      input.value = currentValue;
+
+      // Replace the field with an input element
+      field.innerText = "";
+      field.appendChild(input);
+
+      // Change the button text to "저장" (Save)
+      var button = field.parentElement.querySelector("button");
+      button.innerText = "저장";
+
+      // Add click event to the "저장" (Save) button
+      button.onclick = function () {
+        var newValue = input.value;
+        // Perform the save/update logic here
+        // For this example, we simply update the field value
+        field.innerText = newValue;
+        // Change the button text back to "수정" (Edit)
+        button.innerText = "수정";
+        // Reset the button click event to editField()
+        button.onclick = function () {
+          editField(fieldId);
+        };
+      };
+    }
+  </script>
