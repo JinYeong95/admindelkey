@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/sidebar.css">
+    <link rel="stylesheet" href="../public/css/mypage.css">
+    <link rel="stylesheet" href="../public/public.css">
+    <link rel="stylesheet" href="../public/js/mypage.js">
+    <title>My Page</title>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header id="header" class="header">
+        <!-- 헤더 로고 -->
+        <div id="header__logo">
+            <img src="../public/images/UDiro_seoul_logo2.png" alt="" id="header__logo__img">
+        </div>
+        <!-- 헤더 로고 끝 -->
+        <!-- 헤더 메뉴 시작 -->
+        <ul id="header__menu">
+            <li class="header__menu__list" id="header__menu__map">지도</li>
+            <li class="header__menu__list" id="header__menu__culture">문화</li>
+        </ul>
+        <!-- 헤더 메뉴 끝 -->
+        <!-- 로그인, 회원가입 -->
+        <div id="login" class="login__signUp">마이페이지</div>
+        <div id="logout" class="login__signUp">로그아웃</div>
+        <!-- 로그인, 회원가입 끝 -->
+    </header>
+
+    <!-- 헤더 끝 -->
+
+    <div id="big__container">
+
+        <!-- 사이드 바 -->
+        <div id="side__bar">
+            <ul id="side__bar__ul">
+                <li class="side__bar__li sidebar__bigMenu" id="sb__my__page">마이페이지</li>
+                <li class="side__bar__li sidebar__midMenu" id="sb__my__post">내 정보 수정</li>
+                <hr>
+                <li class="side__bar__li sidebar__smallMenu" id="sb__my__account">내 정보 수정</li>
+                <li class="side__bar__li sidebar__smallMenu" id="sb__my__post2">내 문의글</li>
+            </ul>
+        </div>
+        <!-- 사이드 바 끝 -->
+
+        <!-- 전체 컨테이너 시작 -->
+
+        <div id="container1">
+
+
+            <!-- 프로필 사진 -->
+            <!-- 내 계정 -->
+            <!-- <h3>내 계정</h3><br>
+            <div id="myAcount">
+
+                <!-- <div id="profile__">
+                    <p>프로필 사진</p>
+                    <img src="../public/images/UDiroBackgroundIMG.jpg">
+                </div> -->
+
+            <!-- <div id="myAcount__UD">
+                    <div>
+                        <input type="button" id="remove__picture" value="사진 제거">
+                    </div>
+                    <div>
+                        <input type="file" id="update__picture" value="사진 변경">
+                    </div>
+                </div> -->
+            <!-- </div> -->
+            <!-- <hr> -->
+
+            <!-- 이름 -->
+            <div id="my__Acount__name" class="mypage__innerDiv">
+                <div id="my__Acount__name__text">
+                    <h3>이름</h3>
+                    <p class="name__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;엄준식</p>
+                </div>
+                <!-- <div id="my__Acount__name__update">
+                    <button id="name__update__btn" class="mypage__btn">편집</button>
+                </div> -->
+            </div>
+            <hr>
+            <!-- 이름 끝 -->
+
+
+            <!-- 닉네임 -->
+            <div id="my__Acount__nickname" class="mypage__innerDiv">
+                <div id="my__Acount__nickname__text">
+                    <h3>닉네임</h3>
+                    <p id="nickname" class="nickname__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sicksick2</p>
+                </div>
+                <div id="my__Acount__nickname__update">
+                    <button id="nickname__update__btn" class="mypage__btn" onclick="editNickname()">편집</button>
+                </div>
+            </div>
+            <hr>
+            <!-- 닉네임 끝 -->
+
+            <!-- 이메일 주소 -->
+            <div id="my__Acount__email" class="mypage__innerDiv">
+                <div id="my__Acount__email__text">
+                    <h3 >이메일</h3>
+                    <p id="email" class="email__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de_crystal@naver.com</p>
+                </div>
+                <div id="my__Acount__email__update">
+                    <button id="email__update__btn" class="mypage__btn" onclick="editemail()">편집</button>
+                </div>
+            </div>
+            <hr>
+            <!-- 이메일 주소 끝 -->
+
+
+            <!-- 휴대폰 번호 -->
+            <div id="my__Acount__phone" class="mypage__innerDiv">
+                <div id="my__Acount__phone__text">
+                    <h3>휴대폰 번호</h3>
+                    <p id="phonenumber" class="phone__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-1234-1234</p>
+                </div>
+                <div id="my__Acount__phone__update">
+                    <button id="email__phone__btn" class="mypage__btn" onclick="editphonenumber()">편집</button>
+                </div>
+            </div>
+            <hr>
+            <!-- 휴대폰 번호 끝 -->
+
+            <!-- 비밀번호 변경 -->
+            <div id="my__Acount__password" class="mypage__innerDiv">
+                <div id="my__Acount__password__text">
+                    <h3>비밀번호 변경</h3>
+                    <p class="pw__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;변경할 비밀번호 <input type="password"
+                            id="password__update">
+                </div>
+                <div id="my__Acount__password__text">
+                    <h3>비밀번호 확인</h3>
+                    <p class="pw__text2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;변경할 비밀번호 확인<input type="password"
+                            id="password__update__re">
+                </div>
+                </p>
+                <div id="my__Acount__password___btn">
+                    <button id="name__password__btn" class="mypage__btn">저장</button>
+                </div>
+            </div>
+            <hr>
+            <!-- 비밀번호 변경 -->
+
+
+            <!-- 자주가는 지역 -->
+            <div id="my__Acount__favorite__area" class="mypage__innerDiv">
+                <div id="my__Acount__favorite__area__text">
+                    <h3>자주가는 지역</h3>
+                    <p id="usuallylocal" class="favorite__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;역삼역</p>
+                </div>
+                <div id="my__Acount__favorite__area__update">
+                    <button id="favorite__area__btn" class="mypage__btn" onclick="editusuallylocal()">편집</button>
+                </div>
+            </div>
+            <hr>
+            <!-- 자주가는 지역 끝 -->
+
+            <!-- 자주가는 지역 -->
+            <div id="my__Acount__favorite__area" class="mypage__innerDiv">
+                <div id="my__Acount__favorite__area__text">
+                    <h3>찜한 지역</h3>
+                    <div id="jjuim">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;역삼역</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강남역</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;방배역</p>
+                    </div>
+                </div>
+                <div id="my__Acount__favorite__area__update">
+                    <button id="favorite__area__btn2" class="mypage__btn"onclick="editjjuim()">편집</button>
+                </div>
+            </div>
+            <hr>
+            <!-- 자주가는 지역 끝 -->
+
+
+            <!-- 내 계정 삭제 -->
+            <div id="my__Acount__delete" class="mypage__innerDiv">
+                <div id="my__Acount__delete__text">
+                    <h2>내 계정 삭제</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;내 계정을 삭제하면 더이상 UDiro에 로그인 할수 없게 됩니다.</p>
+                </div>
+                <div id="my__Acount__delete">
+                    <button id="name__delete__btn" class="mypage__btn" onclick="showConfirmation()">계정 삭제</button>
+                </div>
+            </div>
+
+            <!-- 내 계정 삭제 끝 -->
+
+
+        </div>
+
+        <!-- 전체 컨테이너 끝 -->
+        <div id="width1"></div>
+    </div>
+
+
+    <script>
+      function editNickname() {
+		var nicknameText = document.getElementById("nickname");
+		var currentNickname = nicknameText.innerText.trim();
+		var nicknameInput = document.createElement("input");
+		nicknameInput.type = "text";
+		nicknameInput.value = currentNickname;
+
+		// Replace the nickname text with an input element
+		nicknameText.innerText = "";
+		nicknameText.appendChild(nicknameInput);
+
+		// Change the button text to "저장" (Save)
+		var nicknameBtn = document.getElementById("nickname__update__btn");
+		nicknameBtn.innerText = "저장";
+
+		// Add click event to the "저장" (Save) button
+		nicknameBtn.onclick = function () {
+			var newNickname = nicknameInput.value;
+			// Perform the save/update logic here
+			// For this example, we simply update the nickname text
+			nicknameText.innerText = newNickname;
+			// Change the button text back to "편집" (Edit)
+			nicknameBtn.innerText = "편집";
+			// Reset the button click event to editNickname()
+			nicknameBtn.onclick = editNickname;
+		};
+	}
+    function editemail() {
+		var emailText = document.getElementById("email");
+		var currentemail = emailText.innerText.trim();
+		var emailInput = document.createElement("input");
+		emailInput.type = "text";
+		emailInput.value = currentemail;
+
+		emailText.innerText = "";
+		emailText.appendChild(emailInput);
+
+		var emailBtn = document.getElementById("email__update__btn");
+		emailBtn.innerText = "저장";
+
+		emailBtn.onclick = function () {
+			var newemail = emailInput.value;
+			emailText.innerText = newemail;
+			emailBtn.innerText = "편집";
+			emailBtn.onclick = editemail;
+		};
+	}
+
+    function editphonenumber() {
+		var phonenumberText = document.getElementById("phonenumber");
+		var currentphonenumber = phonenumberText.innerText.trim();
+		var phonenumberInput = document.createElement("input");
+		phonenumberInput.type = "text";
+		phonenumberInput.value = currentphonenumber;
+
+		phonenumberText.innerText = "";
+		phonenumberText.appendChild(phonenumberInput);
+
+		var phonenumberBtn = document.getElementById("email__phone__btn");
+		phonenumberBtn.innerText = "저장";
+
+		phonenumberBtn.onclick = function () {
+			var newphonenumber = phonenumberInput.value;
+			phonenumberText.innerText = newphonenumber;
+			phonenumberBtn.innerText = "편집";
+			phonenumberBtn.onclick = editphonenumber;
+		};
+	}
+
+    function editusuallylocal() {
+		var usuallylocalText = document.getElementById("usuallylocal");
+		var currentusuallylocal = usuallylocalText.innerText.trim();
+		var usuallylocalInput = document.createElement("input");
+		usuallylocalInput.type = "text";
+		usuallylocalInput.value = currentusuallylocal;
+
+		usuallylocalText.innerText = "";
+		usuallylocalText.appendChild(usuallylocalInput);
+
+		var usuallylocalBtn = document.getElementById("favorite__area__btn");
+		usuallylocalBtn.innerText = "저장";
+
+		usuallylocalBtn.onclick = function () {
+			var newusuallylocal = usuallylocalInput.value;
+			usuallylocalText.innerText = newusuallylocal;
+			usuallylocalBtn.innerText = "편집";
+			usuallylocalBtn.onclick = editusuallylocal;
+		};
+	}
+
+
+    function editjjuim() {
+		var jjuimText = document.getElementById("jjuim");
+		var currentjjuim = jjuimText.innerText.trim();
+		var jjuimInput = document.createElement("input");
+		jjuimInput.type = "text";
+		jjuimInput.value = currentjjuim;
+
+		jjuimText.innerText = "";
+		jjuimText.appendChild(jjuimInput);
+
+		var jjuimBtn = document.getElementById("favorite__area__btn2");
+		jjuimBtn.innerText = "저장";
+
+		jjuimBtn.onclick = function () {
+			var newjjuim = jjuimInput.value;
+			jjuimText.innerText = newjjuim;
+			jjuimBtn.innerText = "편집";
+			jjuimBtn.onclick = editjjuim;
+		};
+	}
+
+        function showConfirmation() {
+		const confirmation = confirm('정말로 사용자를 삭제하시겠습니까?');
+
+		if (confirmation) {
+			deleteData();
+		}
+	}
+	function deleteData() {
+		console.log('사용자 정보 삭제');
+	}
+      </script>
+
+    <script src="../public/js/location/mypage.js"></script>
+</body>
+
+</html>
